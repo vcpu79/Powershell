@@ -52,7 +52,7 @@ ClearPicture($folder,$folderpath)
 Write-host "*******Starting Movies DIR cleanup of Picture files*******"
 $folder = "Movies DIR"
 $folderpath = 'Z:\Media\Movies'
-ClearNFO($folder,$folderpath) 
+ClearPicture($folder,$folderpath) 
  
 
 
