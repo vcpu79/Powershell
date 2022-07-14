@@ -48,6 +48,13 @@ $folder = "TV Shows Movies DIR"
 $folderpath = 'Z:\Media\TV Shows'
 ClearRAR($folder,$folderpath) 
 
+#Movies Dir
+Write-host "*******Starting Movies DIR cleanup of WinRar files*******"
+$folder = "Movies DIR"
+$folderpath = 'Z:\Media\Movies'
+ClearNFO($folder,$folderpath) 
+ 
+
 
 
  

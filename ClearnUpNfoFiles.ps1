@@ -1,4 +1,4 @@
-  #function to clear dir of nfo file types
+#function to clear dir of nfo file types
 function ClearNFO(){
 $nfo = "*.nfo"
 foreach ($file in $nfo){
@@ -48,6 +48,12 @@ $folder = "TV Shows Movies DIR"
 $folderpath = 'Z:\Media\TV Shows'
 ClearNFO($folder,$folderpath) 
 
+#Movies Dir
+Write-host "*******Starting Movies DIR cleanup of nfo files*******"
+$folder = "Movies DIR"
+$folderpath = 'Z:\Media\Movies'
+ClearNFO($folder,$folderpath) 
+ 
 
 
  
