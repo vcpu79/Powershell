@@ -1,4 +1,4 @@
-    #function to clear dir of Picture file types
+#function to clear dir of Picture file types
 function ClearPicture(){
 $pics = ('*.png','*.jpeg','*.jpg') 
 foreach ($file in $pics){
