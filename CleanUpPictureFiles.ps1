@@ -2,11 +2,11 @@
 function ClearPicture(){
 $pics = ('*.png','*.jpeg','*.jpg') 
 foreach ($file in $pics){
-   $count = (GCI -path $folderpath -recurse | where {$_.name -like "$file"} | measure-object).count 
+   $count = (Get-ChildItem -path $folderpath -recurse | Where-Object {$_.name -like "$file"} | measure-object).count 
    write-host "Found $count $file files"
       if ($count -gt 0) {
          write-host "Deleting $file files"
-         GCI -path $folderpath $file -recurse | foreach { remove-item -path $_.fullname }
+         Get-ChildItem -path $folderpath $file -recurse | ForEach-Object { remove-item -path $_.fullname }
          write-host "$folder - Picture $file deleted"
       }
    } 
