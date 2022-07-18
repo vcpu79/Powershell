@@ -2,11 +2,11 @@
 function ClearRAR(){
 $rar = ('*.r0*','*.r1*','*.r2*','*.r3*','*.r4*','*.r5*','*.r6*','*.r7*','*.r8*') 
 foreach ($file in $rar){
-   $count = (GCI -path $folderpath -recurse | where {$_.name -like "$file"} | measure-object).count 
+   $count = (Get-ChildItem -path $folderpath -recurse | Where-Object {$_.name -like "$file"} | measure-object).count 
    write-host "Found $count $file files"
       if ($count -gt 0) {
          write-host "Deleting $file files"
-         GCI -path $folderpath $file -recurse | foreach { remove-item -path $_.fullname }
+         Get-ChildItem -path $folderpath $file -recurse | ForEach-Object { remove-item -path $_.fullname }
          write-host "$folder - WinRar $file deleted"
       }
    } 
